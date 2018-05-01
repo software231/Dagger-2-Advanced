@@ -18,7 +18,7 @@ public class RandomUserApplication extends Application {
     //add application name in Manifest file
     private RandomUserComponent randomUserApplicationComponent;
 
-    public static RandomUserApplication get(Activity activity){
+    public static RandomUserApplication get(Activity activity) {
         return (RandomUserApplication) activity.getApplication();
     }
 
@@ -32,7 +32,7 @@ public class RandomUserApplication extends Application {
                 .build();
     }
 
-    public RandomUserComponent getRandomUserApplicationComponent(){
+    public RandomUserComponent getRandomUserApplicationComponent() {
         return randomUserApplicationComponent;
     }
 }

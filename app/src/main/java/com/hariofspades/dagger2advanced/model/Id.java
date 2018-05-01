@@ -1,4 +1,3 @@
-
 package com.hariofspades.dagger2advanced.model;
 
 import com.google.gson.annotations.Expose;

@@ -1,9 +1,8 @@
 package com.hariofspades.dagger2advanced;
 
-import android.content.Context;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -20,7 +19,6 @@ import com.hariofspades.dagger2advanced.interfaces.RandomUsersApi;
 import com.hariofspades.dagger2advanced.model.RandomUsers;
 import com.hariofspades.dagger2advanced.module.ContextModule;
 import com.jakewharton.picasso.OkHttp3Downloader;
-import com.squareup.picasso.OkHttpDownloader;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -128,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         randomUsersCall.enqueue(new Callback<RandomUsers>() {
             @Override
             public void onResponse(Call<RandomUsers> call, @NonNull Response<RandomUsers> response) {
-                if(response.isSuccessful()) {
+                if (response.isSuccessful()) {
                     mAdapter.setItems(response.body().getResults());
                     recyclerView.setAdapter(mAdapter);
                 }
@@ -141,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public RandomUsersApi getRandomUserService(){
+    public RandomUsersApi getRandomUserService() {
         return randomUsersApi;
     }
 

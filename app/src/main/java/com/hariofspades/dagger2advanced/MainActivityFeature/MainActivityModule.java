@@ -21,7 +21,7 @@ public class MainActivityModule {
 
     @Provides
     @MainActivityScope
-    public RandomUserAdapter randomUserAdapter(Picasso picasso){
+    public RandomUserAdapter randomUserAdapter(Picasso picasso) {
         return new RandomUserAdapter(mainActivity, picasso);
     }
 }
